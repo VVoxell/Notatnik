@@ -1,0 +1,4 @@
+﻿  Okno1.cpp
+C:\Users\czare\source\repos\Notatnik2\Notatnik2\Okno1.cpp(19,15): warning C4551: wywołaniu funkcji brakuje listy argumentów
+  Okno1.obj : napotkano moduł MSIL; konsolidowanie przyrostowe jest wyłączone dla modułów MSIL; zostanie wykonana pełna konsolidacja
+  Notatnik2.vcxproj -> C:\Users\czare\source\repos\Notatnik2\Debug\Notatnik2.exe
