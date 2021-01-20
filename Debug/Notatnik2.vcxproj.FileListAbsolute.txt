@@ -1,5 +1,0 @@
-C:\Users\czare\source\repos\Notatnik2\Notatnik2\Debug\Notatnik2.vcxprojAssemblyReference.cache
-C:\Users\czare\source\repos\Notatnik2\Notatnik2\Debug\Notatnik2.Okno1.resources
-C:\Users\czare\source\repos\Notatnik2\Notatnik2\Debug\Notatnik2.vcxproj.GenerateResource.cache
-C:\Users\czare\source\repos\Notatnik2\Notatnik2\Debug\Notatnik2.Okno2.resources
-C:\Users\czare\source\repos\Notatnik2\Notatnik2\Debug\Notatnik2.Okno3.resources
