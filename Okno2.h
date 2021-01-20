@@ -12,12 +12,15 @@ namespace Notatnik2 {
 	using namespace System::IO;
 	using namespace System::Text;
 
+
+
 	/// <summary>
 	/// Podsumowanie informacji o Okno2
 	/// </summary>
 	public ref class Okno2 : System::Windows::Forms::Form
 	{
 	public:
+		Note^ nowa;
 		Okno2(void)
 		{
 			InitializeComponent();
@@ -30,10 +33,17 @@ namespace Notatnik2 {
 		{
 			return textBox1->Text;
 		}
+		Note^ ZwrotNowej()
+		{
+			return nowa;
+		}
+		
 	protected:
 		/// <summary>
-		/// Wyczyœæ wszystkie u¿ywane zasoby.
+		/// WyczyÅ›Ä‡ wszystkie uÅ¼ywane zasoby.
 		/// </summary>
+		
+		
 		~Okno2()
 		{
 			if (components)
@@ -48,8 +58,9 @@ namespace Notatnik2 {
 	protected:
 
 	private:
+		
+		
 		void Zapis_Danych(Note^ x);
-		void Zapis_Listy(Note^ x);
 		/// <summary>
 		/// Wymagana zmienna projektanta.
 		/// </summary>
@@ -57,8 +68,8 @@ namespace Notatnik2 {
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
-		/// Metoda wymagana do obs³ugi projektanta — nie nale¿y modyfikowaæ
-		/// jej zawartoœci w edytorze kodu.
+		/// Metoda wymagana do obsÅ‚ugi projektanta â€” nie naleÅ¼y modyfikowaÄ‡
+		/// jej zawartoÅ›ci w edytorze kodu.
 		/// </summary>
 		void InitializeComponent(void)
 		{
@@ -120,11 +131,9 @@ namespace Notatnik2 {
 		}
 #pragma endregion
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-		Note^ nowa = gcnew Note;
-		nowa->nazwa = textBox1->Text;
+		nowa = gcnew Note(textBox1->Text);
 		nowa->czas_utworzenia = DateTime::Now;
 		nowa->czas_edycji = DateTime::Now;
-		Zapis_Listy(nowa);
 		Zapis_Danych(nowa);
 		Okno2::Close();
 	}
