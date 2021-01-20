@@ -131,6 +131,9 @@
     <ClInclude Include="Okno2.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="Okno3.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Okno1.resx">
@@ -138,6 +141,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Okno2.resx">
       <DependentUpon>Okno2.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Okno3.resx">
+      <DependentUpon>Okno3.h</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
