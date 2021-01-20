@@ -3,21 +3,25 @@
 #include <stdio.h>
 #include <string>
 
+
 using namespace System;
 using namespace System::Windows::Forms;
 using namespace System::Text;
+using namespace System::Collections::Generic;
 using namespace System::IO;
 using namespace std;
 [STAThread]
 
-void MarshalString(String^ s, string& os) {
+void MarshalString(String^ s, string& os)
+{
 
 	using namespace Runtime::InteropServices;
 	const char* chars =
 		(const char*)(Marshal::StringToHGlobalAnsi(s)).ToPointer();
 	os = chars;
 	Marshal::FreeHGlobal(IntPtr((void*)chars));
-	}
+}
+
 void Notatnik2::Okno2::Zapis_Danych(Note^ x)
 {
 	string nazwa;
@@ -32,12 +36,4 @@ void Notatnik2::Okno2::Zapis_Danych(Note^ x)
 		utworzenie + "\n" +
 		edycja + "\n";
 	dane.close();
-}
-void Notatnik2::Okno2::Zapis_Listy(Note^ x)
-{
-	string nazwa_notki;
-	MarshalString(x->nazwa, nazwa_notki);
-	ofstream notka("Lista.txt", ofstream::app);
-	notka << nazwa_notki + "\n";
-	notka.close();
 }
